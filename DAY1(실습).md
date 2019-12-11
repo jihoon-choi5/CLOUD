@@ -1,23 +1,24 @@
 ## 1. nodejs 프로젝트 생성
 	- myproject or firstmall..
-	```
+```
   $ express --session --ejs --css stylus 프로젝트명
 	$ cd 프로젝트명
 	$ npm intall
+	
   ```
 	
 	
 	
 	
 ## 2. nodejs프로젝트<->git연동
-	-연동
+-연동
   ```
 	$ git init, 
 	$ git add .
 	$ git remote add origin url
 	$ git commit -m "aaa" 
 	$ git push 
-	```
+```
 	
 	
 	
