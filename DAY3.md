@@ -65,11 +65,15 @@ $ npm install -g express-generator
 $ git clone git레파지토리주소
 ```
 
-### 5.3 프로젝스 시작
+### 5.3 프로젝트 시작
 ```
 $ cd 프로젝트폴더
+$  npm install
 $ npm start
 ## 새 터미널 창에서 접속되나 확인
 $ curl http://127.0.0.1:3000
 ```
 
+### 5.4 외부 서버에서 프로젝트 접속
+Ec2 콘솔창에서 만든 서버 시큐리티 그룹에 인바운드규칙 추가
+> 사용자규정 / TCP/ 3000/위치무관/설명(EXPRESS)
