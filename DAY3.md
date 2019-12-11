@@ -61,4 +61,15 @@ $ sudo yum install nodejs
 $ npm install -g express-generator
 ```
 ### 5.2 git에서 DAY2실습에서 만든 레포지토리 다운
+```
+$ git clone git레파지토리주소
+```
+
+### 5.3 프로젝스 시작
+```
+$ cd 프로젝트폴더
+$ npm start
+## 새 터미널 창에서 접속되나 확인
+$ curl http://127.0.0.1:3000
+```
 
