@@ -1,7 +1,7 @@
 ## 1. AWS Ec2 서버 만들기
 
   ### 1.1 AMI os 이미지 선택
-  ![aws](/assets/images/duck.jpg)
+  ![aws](MCCloudStudy/img/1.jpg)
   ### 1.2 서버 사양 선택(cpu, 메모리, 가격 등)
   ### 1.3 인스턴스 세부 정보 구성
         - 인스턴스 개수, 네트워크 설정 등
