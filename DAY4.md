@@ -1,4 +1,5 @@
 # 데이터
+
 > 저장비용이 내려가서 데용량의 데이터 저장이 가능해짐
 
 ## 1. 정형데이터
@@ -15,3 +16,21 @@
 
 ## 3 데이터베이스 기초 이론
 *LAMP-(Linux, Apache, Mysql, php)
+
+## 4. 데이터베이스 언어
+
+### 4.1 SQL(ANSI-SQL)
+- DDL(데이터 정의어)
+  create, alter, drop
+- DML(데이터 조작어): CRUD
+  select, insert, update, delete
+- DCL(데이터 제어어)
+  grant, revoke
+ 
+ ** 데이터베이스 이관(ETL)
+- header, recode(row)
+
+## 4.2 데이터베이스 개념적 구조
+- schema
+- entity
+
