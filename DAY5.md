@@ -87,3 +87,11 @@ from employees
 where department_id is not null
 group by department_id;
 ```
+## [11] 가장 많은 부하직원을 가지고 있는 사원
+```sql
+select employee_id, max(cnt)
+from 
+	(select employee_id , count(manager_id) as cnt
+	from hr.employees 
+	group by manager_id) as result;
+```
