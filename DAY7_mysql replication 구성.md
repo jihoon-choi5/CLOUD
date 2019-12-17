@@ -110,6 +110,7 @@ validate_password_mixed_case_count=0
 모든 외부 IP에서 해당 mysql에 접속할 수있도록 설정
 ```
 bind-address=0.0.0.0
+sql_slave_skip_counter = 1
 ```
 
 ### 10. mysql서버 재기동
