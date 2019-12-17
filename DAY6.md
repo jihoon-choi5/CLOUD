@@ -104,6 +104,8 @@ master_user='replicate_user',\
 master_password='1111',\
 master_log_file='mysql-log_bin.000001',\
 master_log_pos=2470;
+
+change master to master_host='127.0.0.1', master_port=13306, master_user='replicate_user', master_password='1111', master_log_file='mysql-log_bin.000005', master_log_pos=154;
 14. Slave DB 재실행
 
 15. show slave status\G;
