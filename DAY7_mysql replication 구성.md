@@ -215,6 +215,7 @@ mysql> show slave status\G;
 ```
 
 ### 20. master서버의 cloud_db덤프해서 slave의 cloud_db에 옮기기
+>만약 master와 slave에 동일 database, table구성이 안 되어있으면 에러남!
 >> node01서버에서
 ```
 $ mysqldump -uroot -p cloud-db > cloud_db_master.sql
