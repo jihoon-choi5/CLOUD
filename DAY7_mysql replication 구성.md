@@ -94,7 +94,7 @@ $ mysql -uroot -p
 ### 9. mysql 설정파일 변경 /etc/my.cnf 
 >> node01, node02 모두
 ```
-$ sudo vi /etc/cnf
+$ sudo vi /etc/my.cnf
 ```
 
 #### 9.1 비밀번호 복잡도 
