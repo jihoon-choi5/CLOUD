@@ -45,3 +45,27 @@ apt-cache search
 apt-cache show
 
 apt-get install/remove/upgrade
+
+
+
+iptables -L
+iptables -F >>룰셋 제거 해보기
+
+## daemon 형 프로세스(서비스) >> 메모리에 상주하는 서비스
+
+inetd - telnet
+## server 형 프로세스(서비스) >>
+
+## job Scheduling 
+1. cron: 주기적인 작업처리
+2. at: 한번 예약해서
+3. batch: 특정시간 예약할 수없고, CPU가 한가할때
+
+
+## ssh 공개키 개인키 만들기
+ssh-keygen
+
+ssh-copy-id student@172.20.0.129
+
+ssh student@172.20.0.129
+하면 인증 없이 접속 가능
