@@ -56,5 +56,27 @@ mysql_secure_installation
 
 ## Message queue
 
+RabbitMQ, Qpid, and ZeroMQ.
+#### RabbitMQ 설치
+yum install rabbitmq-server
+systemctl enable rabbitmq-server.service
+systemctl start rabbitmq-server.service
+#### 사용자 추가
+rabbitmqctl add_user openstack RABBIT_PASS
+#### 사용자 권한 추가
+rabbitmqctl set_permissions openstack ".*" ".*" ".*"
 
- 
+## Memcached
+
+yum install memcached python-memcached
+vi /etc/sysconfig/memcached
+아래 내용 수정
+```
+OPTIONS="-l 127.0.0.1,::1,controller"
+```
+
+systemctl enable memcached.service
+systemctl start memcached.service
+
+## KeyStone설치
+[참조링크](https://docs.openstack.org/keystone/rocky/install/)
