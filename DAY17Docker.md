@@ -43,9 +43,15 @@ $ doc ps -a
 $ doc container rm [ID]
 $ doc stop [도커컨테이너이름or ID] && doc rm [ID]
 전체삭제
-$ doc container purun
+$ doc container prune
 $ doc container stop $(docker ps -q)
 $ doc container rm $(docker ps -qa)
+```
+
+- 로그 보기
+```
+$ doc logs [컨테이너ID]
+
 ```
 # 실습
 ## 1.간단한 웹페이지 생성(Docker없이 구동)
@@ -53,7 +59,7 @@ prerequest nodejs 설치
 /myweb폴더생성
 폴더밑에 **package.json**, index.js파일 만들어서 아래 내용 입력
 - package.json
-```
+```json
 {
     "dependencies": {
         "express": "*"
@@ -65,7 +71,7 @@ prerequest nodejs 설치
 
 ```
 - index.js
-```
+```scirpt
 const express = require('express');
 const app = express();
 
@@ -84,3 +90,21 @@ npm install
 npm start
 ```
 브라우저에 http://localhost:8080접속해보기
+
+## 2. Docker로 간단한 웹페이지 생성
+
+### 2.1 Dockerfile생성(아래 내용)
+```
+FROM alpine
+RUN npm install
+CMD ["npm", "start"]
+
+```
+
+### FROM >node 사용가능한 이미지
+### run -> npm install 실행
+### cmd -> npm start
+
+```
+$ docker image build -t test/simpleweb:latest .
+$ docker run -d test/simpleweb:latest
