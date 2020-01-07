@@ -23,7 +23,7 @@ $ doc run --name myweb1 -d -p 9000:8080 gihyodocker/echo:latest
 ```
 - -d: 데몬
 - -p:포트
--
+- --rm: 컨테이너 stop하면 컨테이너 자동으로 삭제
 새 커멘드창에서
 ```
 $ doc container ls
@@ -106,5 +106,12 @@ CMD ["npm", "start"]
 ### cmd -> npm start
 
 ```
-$ docker image build -t test/simpleweb:latest .
+$ docker image build --no-cache -t test/simpleweb:latest .
 $ docker run -d test/simpleweb:latest
+
+$ docker push test/simpleweb:latest
+$ docker pull eoe04/simpleweb:latest
+$ docker exec -it web(컨테이너이름) hostname
+$ docker exec -it web(컨테이너이름) sh
+
+$ docker search --limit 5 mysql
